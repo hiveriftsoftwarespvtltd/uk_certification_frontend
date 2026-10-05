@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'DORISBR';
+  src: url('/fonts/DORISBR.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ebrima';
+  src: url('/fonts/ebrima.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'ebrima', Arial, sans-serif !important;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 15px;
+  line-height: 25px;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings and header links use DORISBR without forcing text color */
+h1, h2, h3, h4, h5, h6,
+.font-doris,
+.nav-link-doris {
+  font-family: 'DORISBR', sans-serif !important;
+}
+
+/* Base text sizing across components */
+p, li, td, th {
+  font-family: 'ebrima', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+/* Input, button, select elements */
+input, textarea, select, button {
+  font-family: 'ebrima', Arial, sans-serif;
+  font-size: 14px;
+}
+
+::selection {
+  background: #2095f2;
+  color: #ffffff;
+}
+
+/* Heading underline */
+.heading-underline {
+  position: relative;
+  padding-bottom: 20px;
+}
+.heading-underline::after {
+  content: '';
+  width: 80px;
+  border-bottom: 2px solid #2095f2;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Sidebar block link */
+.sidebar-link {
+  display: block;
+  width: 100%;
+  background: #f5f5f5;
+  padding: 12px 16px;
+  margin-top: 2px;
+  text-transform: uppercase;
+  font-family: 'ebrima', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  color: #333333;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link:hover {
+  background: #2095f2;
+  color: #ffffff;
+  border-left-color: #0b3b60;
+  text-decoration: none;
+}
+
+/* Dynamic Scraped Content */
+.dynamic-content h4,
+.dynamic-content h5,
+.dynamic-content h6 {
+  font-family: 'DORISBR', sans-serif !important;
+  color: #222 !important;
+  text-transform: uppercase;
+  font-size: 19px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+.dynamic-content h4 {
+  font-size: 20px;
+}
+.dynamic-content p {
+  font-family: 'ebrima', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 14px;
+}
+.dynamic-content ul.ul,
+.dynamic-content ul {
+  list-style-type: disc;
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+.dynamic-content ul li {
+  font-family: 'ebrima', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 6px;
+}
+.dynamic-content a {
+  color: #2095f2;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.dynamic-content a:hover {
+  color: #1884d8;
+}

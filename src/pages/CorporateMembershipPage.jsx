@@ -1,0 +1,77 @@
+import { Link } from 'react-router-dom'
+import SidebarServices from '../components/SidebarServices'
+
+export default function CorporateMembershipPage() {
+  return (
+    <div className="bg-white min-h-screen text-[#333]">
+      {/* 1. Page Header (.content-heading) */}
+      <section
+        className="py-14 text-center text-white"
+        style={{ background: 'radial-gradient(circle, #444, #000)' }}
+      >
+        <div className="max-w-[1140px] mx-auto px-4">
+          <h1 className="font-doris font-bold uppercase text-[32px] sm:text-[38px] text-white">
+            Corporate Membership
+          </h1>
+        </div>
+      </section>
+
+      {/* 2. Main Content & Sidebar */}
+      <div className="max-w-[1140px] mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          {/* Left Sidebar */}
+          <div className="md:col-span-4 order-2 md:order-1">
+            <SidebarServices />
+          </div>
+
+          {/* Right Content */}
+          <main className="md:col-span-8 order-1 md:order-2 space-y-5 text-[15px] leading-[25px] text-black/80">
+            <p>
+              UK Certification and Assessment Ltd strengthening a high-value profession that helps make the world safer more prosperous, accessible, and more connected. We know that shaping the future of next generation is a big task and we always try to get in touch with the Corporate Membership those are made to assure quality services. The organizations to whom with we have got Corporate Membership are assuring standardization of the services. Here are the details of our Corporate Membership organizations.
+            </p>
+
+            <h5 className="font-doris font-bold uppercase text-[19px] text-[#222] pt-2">
+              Delhi Chamber of Commerce (DCC)
+            </h5>
+            <p>
+              The DCC (Delhi Chamber of Commerce) is 70 years old organization for the commercial opinion. DCC is consulted by state Governments and the Government of India on all vital and important commercial matters. It is truly equipped to serve the interest of several organizations on commercial affairs.
+            </p>
+            <p>
+              The DCC Committee is always prepared to bring to the notice of the Government of India and the State Government legitimate grievances of the commercial community. Delhi Chamber of Commerce represents Governments to the enactment of laws for the protection of the Commerce and Industry of India. Log in for membership information{' '}
+              <a
+                href="http://delhichambers.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-[#2095f2] hover:underline font-bold"
+              >
+                www.delhichambers.com
+              </a>
+            </p>
+          </main>
+        </div>
+      </div>
+
+      {/* 3. Callout Strip (.wrap1) */}
+      <section className="bg-[#2095f2] text-white py-10 mt-10">
+        <div className="max-w-[1140px] mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div>
+            <h3 className="font-doris text-[32px] sm:text-[35px] font-bold leading-tight !text-white">
+              Request for Quotation
+            </h3>
+            <h6 className="text-[20px] sm:text-[25px] uppercase font-normal mt-1 !text-white">
+              Proposal & Sample ISO Certificate
+            </h6>
+          </div>
+          <div>
+            <Link
+              to="/contact"
+              className="bg-white !text-[#222] hover:bg-slate-100 rounded-[50px] px-10 py-2.5 uppercase font-bold text-[14px] tracking-wide inline-block shadow transition-transform hover:scale-105"
+            >
+              Get a Quote
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
